@@ -56,4 +56,4 @@ axios.interceptors.response.use(
     return Promise.reject(err);
   }
 );
-export default axios
+export default axios;
