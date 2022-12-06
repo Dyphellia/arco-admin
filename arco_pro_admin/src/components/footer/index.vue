@@ -1,5 +1,7 @@
 <template>
-  <a-layout-footer class="footer">Arco Pro</a-layout-footer>
+  <a-layout-footer class="footer">
+    Copyright &copy;2022-2023 Oasis All Rights Reserved.
+  </a-layout-footer>
 </template>
 
 <script lang="ts" setup></script>

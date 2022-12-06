@@ -128,13 +128,15 @@
             {{ $t('searchTable.operation.download') }}
           </a-button>
           <a-tooltip :content="$t('searchTable.actions.refresh')">
-            <div class="action-icon" @click="search"
-              ><icon-refresh size="18"
-            /></div>
+            <div class="action-icon" @click="search">
+              <icon-refresh size="18" />
+            </div>
           </a-tooltip>
           <a-dropdown @select="handleSelectDensity">
             <a-tooltip :content="$t('searchTable.actions.density')">
-              <div class="action-icon"><icon-line-height size="18" /></div>
+              <div class="action-icon">
+                <icon-line-height size="18" />
+              </div>
             </a-tooltip>
             <template #content>
               <a-doption
@@ -153,7 +155,9 @@
               position="bl"
               @popup-visible-change="popupVisibleChange"
             >
-              <div class="action-icon"><icon-settings size="18" /></div>
+              <div class="action-icon">
+                <icon-settings size="18" />
+              </div>
               <template #content>
                 <div id="tableSetting">
                   <div
@@ -167,7 +171,9 @@
                     <div>
                       <a-checkbox
                         v-model="item.checked"
-                        @change="handleChange($event, item as TableColumnData, index)"
+                        @change="
+                          handleChange($event, item as TableColumnData, index)
+                        "
                       >
                       </a-checkbox>
                     </div>
@@ -244,10 +250,10 @@
 </template>
 
 <script lang="ts" setup>
-  import { computed, ref, reactive, watch, nextTick } from 'vue';
+  import { computed, nextTick, reactive, ref, watch } from 'vue';
   import { useI18n } from 'vue-i18n';
   import useLoading from '@/hooks/loading';
-  import { queryPolicyList, PolicyRecord, PolicyParams } from '@/api/list';
+  import { PolicyParams, PolicyRecord, queryPolicyList } from '@/api/list';
   import { Pagination } from '@/types/global';
   import type { SelectOptionData } from '@arco-design/web-vue/es/select/interface';
   import type { TableColumnData } from '@arco-design/web-vue/es/table/interface';
@@ -485,6 +491,7 @@
   .container {
     padding: 0 20px 20px 20px;
   }
+
   :deep(.arco-table-th) {
     &:last-child {
       .arco-table-th-item-title {
@@ -492,18 +499,22 @@
       }
     }
   }
+
   .action-icon {
     margin-left: 12px;
     cursor: pointer;
   }
+
   .active {
     color: #0960bd;
     background-color: #e3f4fc;
   }
+
   .setting {
     display: flex;
     align-items: center;
     width: 200px;
+
     .title {
       margin-left: 12px;
       cursor: pointer;

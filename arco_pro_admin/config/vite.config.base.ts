@@ -13,6 +13,10 @@ export default defineConfig({
         replacement: resolve(__dirname, '../src'),
       },
       {
+        find: 'static',
+        replacement: resolve(__dirname, '../public/static'),
+      },
+      {
         find: 'assets',
         replacement: resolve(__dirname, '../src/assets'),
       },

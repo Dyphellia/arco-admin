@@ -2,10 +2,11 @@
   <div class="container">
     <div class="logo">
       <img
+        class="logo-icon"
         alt="logo"
-        src="//p3-armor.byteimg.com/tos-cn-i-49unhts6dw/dfdba5317c0c20ce20e64fac803d52bc.svg~tplv-49unhts6dw-image.image"
+        src="../../../public/static/images/icon.ico"
       />
-      <div class="logo-text">Arco Design Pro</div>
+      <div class="logo-text">{{ $t('login.logo.title') }}</div>
     </div>
     <LoginBanner />
     <div class="content">
@@ -59,6 +60,12 @@
     z-index: 1;
     display: inline-flex;
     align-items: center;
+
+    &-icon {
+      width: 33px;
+      height: 33px;
+      margin-right: 7px;
+    }
 
     &-text {
       margin-right: 4px;

@@ -1,7 +1,7 @@
 <template>
   <div class="login-form-wrapper">
     <div class="login-form-title">{{ $t('login.form.title') }}</div>
-    <div class="login-form-sub-title">{{ $t('login.form.title') }}</div>
+    <!--    <div class="login-form-sub-title">{{ $t('login.form.title') }}</div>-->
     <div class="login-form-error-msg">{{ errorMessage }}</div>
     <a-form
       ref="loginForm"
@@ -46,7 +46,7 @@
           <a-checkbox
             checked="rememberPassword"
             :model-value="loginConfig.rememberPassword"
-            @change="(setRememberPassword as any)"
+            @change="setRememberPassword as any"
           >
             {{ $t('login.form.rememberPassword') }}
           </a-checkbox>
